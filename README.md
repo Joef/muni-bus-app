@@ -4,9 +4,11 @@ a.k.a. "Dude, where's my bus?" App.
 
 ![Screenshot](https://github.com/Joef/muni-bus-app/blob/master/src/assets/images/screenshot.jpg)
 
+[Live Demo](http://muni-bus-app.herokuapp.com/) running on heroku.  (Note: The app will not function at https because the API is not currently set to take secure requests.)
+
 ## Development
 
-To run the app, use `ng serve` and navigate to `http://localhost:4200/`.  Use this mode in development to automatically reload on any changed source files.
+To run the app locally, use `ng serve` and navigate to `http://localhost:4200/`.  Use this mode in development to automatically reload on any changed source files.
 
 ## Production 
 
@@ -20,7 +22,7 @@ To deploy the app, use the `ng build` command (or `ng build --aot --prod` more s
 
 ## Google Maps
 
-The app uses the ['Google Maps API'](https://developers.google.com/maps/documentation/javascript/tutorial) with a key for API use.  The key is configured to work on a specific server, otherwise, will also work on `localhost`.
+The app uses the [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial) with a key for API use.  The key is configured to work on a specific server, otherwise, will also work on `localhost`.
 
 ## Running unit tests
 
