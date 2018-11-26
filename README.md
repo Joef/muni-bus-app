@@ -2,7 +2,7 @@
 
 a.k.a. "Dude, where's my bus?" App.
 
-![Screenshot](http://muni-bus-app/assets/images/screenshot.jpg)
+![Screenshot](https://github.com/Joef/muni-bus-app/blob/master/src/assets/images/screenshot.jpg)
 
 ## Development
 
