@@ -1,0 +1,44 @@
+.routes {
+        
+    overflow-y: scroll;
+    height: 100%;
+    border-top: 1px solid #9a9a9a;
+    padding-top: 5px;
+    padding-bottom: 135px; //height of the legend header
+}
+
+$legend-size: 18px;
+.route {
+    padding: 3px 12px;
+    position: relative;
+    cursor: pointer;
+
+    .fa {
+        position: absolute;
+        width: 20px;
+        left: 14px;
+        top: 5px;
+    }
+    .icon {
+        width: $legend-size; 
+        height: $legend-size;
+        background-color: transparent;
+        border: 1px solid #ccc;
+        display:inline-block;
+        margin-right: 5px;
+    }
+    .title {
+        display: inline-block;
+    }
+}
+$subtle: #9a9a9a;
+    
+.action {
+    text-transform: uppercase;
+    color: $subtle;
+    font-size: 0.8em;
+    padding: 5px 15px;
+    a {
+       cursor: pointer; 
+    }
+}

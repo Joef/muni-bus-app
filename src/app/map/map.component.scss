@@ -1,0 +1,19 @@
+/* GOOGLE */
+.map-canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    color: #000;
+}
+
+.updating, .clear {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px;
+    
+}
+.updating {
+    background: #34362D;
+}

@@ -1,0 +1,19 @@
+<div class="action">
+  <div>
+    <!--
+      <a (click)="toggleAll(true)">Select All</a>
+    -->
+    <a (click)="toggleAll(false)">Clear All</a>
+  </div>
+</div>
+<div class="routes">
+  <div *ngFor="let route of filteredRoutes">
+    <div class="route no-select" (click)="toggleRoute(route)">
+      
+      <div class="fa fa-check" *ngIf="route.show"></div>
+      <div class="icon" [ngStyle]="{'background-color':'#' + route.color}"></div>
+      <div *ngIf="open" class="title">{{route.title}}</div>
+      <div *ngIf="!open" class="title">{{route.tag}}</div>
+    </div>
+  </div>
+</div>

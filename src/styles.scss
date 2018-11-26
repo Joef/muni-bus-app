@@ -1,0 +1,43 @@
+/*
+ * Globals
+ */
+body, html {
+    font-family:  'Helvetica Neue',Arial Narrow,Helvetica,Arial,sans-serif;
+    color: white;
+    height: 100%;
+}
+
+a, 
+a:visited,
+a:active {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #cccccc;
+}
+
+/*
+ * Bootstrap overrides
+ */
+
+/* keep text from getting selected in certain cases */
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.no-shadow {
+  -webkit-box-shadow: none !important;
+         box-shadow: none !important;
+
+}
+.no-focus, .no-focus:focus {
+  outline:none !important;
+}
