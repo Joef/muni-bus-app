@@ -1,3 +1,6 @@
+$screen-sm-min: 768px;
+$screen-xs-max: $screen-sm-min - 1;
+
 .legend {
     background-color: #34362E;
     min-height:100%;
@@ -50,6 +53,27 @@
                 padding: 3px 9px 0 2px;
             }
         }
+    }
+
+    
+
+    @media (max-width: $screen-xs-max) {
+        height: 32px;
+        background-color: transparent;
+
+        .menu {
+            display: none;
+        }
+        &.active {
+            width: 100%;
+            background-color: #34362E;
+            
+            .menu {
+                display: block;
+            }
+        }
+
+        
     }
     $subtle: #9a9a9a;
     

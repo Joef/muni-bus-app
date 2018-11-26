@@ -4,22 +4,23 @@
       <img class="logo" src="/assets/images/logo-sfmta.png" />
     
   </h4>
-  <div class="routes">
-    Routes
+  <div class="menu">
+    <div class="routes">
+      Routes
+    </div>
+    <div class="search">
+      <form class="form-inline" autocomplete="off">
+        <div class="input-group">
+          <input type="text" class="form-control no-shadow no-focus" [(ngModel)]="filterBy" name="filerBy" placeholder="Filter">
+          <span class="input-group-btn">
+            <button class="btn btn-default no-shadow no-focus" (click)="clearFilter()">
+              <i class="fa" [ngClass]="{'fa-filter':!filterBy?.length,'fa-times':filterBy?.length}"></i>
+            </button>
+          </span>
+        </div>
+      </form>
+    </div>
+    
+    <bus-routes-list [routes]="routes" [filterBy]="filterBy" [open]="open" (routeToggle)="filterSelectedRoutes($event)"></bus-routes-list>
   </div>
-  <div class="search">
-    <form class="form-inline" autocomplete="off">
-      <div class="input-group">
-        <input type="text" class="form-control no-shadow no-focus" [(ngModel)]="filterBy" name="filerBy" placeholder="Filter">
-        <span class="input-group-btn">
-          <button class="btn btn-default no-shadow no-focus" (click)="clearFilter()">
-            <i class="fa" [ngClass]="{'fa-filter':!filterBy?.length,'fa-times':filterBy?.length}"></i>
-          </button>
-        </span>
-      </div>
-    </form>
-  </div>
-  
-  <bus-routes-list [routes]="routes" [filterBy]="filterBy" [open]="open" (routeToggle)="filterSelectedRoutes($event)"></bus-routes-list>
-  
 </div>
