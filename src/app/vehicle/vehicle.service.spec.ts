@@ -1,5 +1,6 @@
 import { VehicleService } from './vehicle.service'
 import { IVehicleObj, IVehicle } from './vehicle.model'
+import { IRoute } from '../routes/route.model'
 import { Observable, of } from 'rxjs'
 
 describe('VehicleService', () => {
@@ -12,20 +13,19 @@ describe('VehicleService', () => {
     })
 
     describe('get vehicles', () => {
-        it('should return a list of vehicles for a route', () => {
-            var vehicle:IVehicleObj = { 
-                vehicle: [{
-                    id: '156',
-                    routeTag: 'E',
-                
-                }],
-                lastTime: {
-                    time: 0
-                }
+        it('should call the api', () => {
+            var route = { 
+                title: 'test',
+                tag: 'N',
+                lastUpdated: 0,
+                vehicles: []
             };
+                
+            mockHttp.get.and.returnValue(of(false))
+            vehicleService.getVehicles(<IRoute>route)
 
-            mockHttp.get.and.return(of(vehicle))
-
+            //expect(route.vehicles.length).toBe(0);
+            expect(mockHttp.get).toHaveBeenCalledWith('http://webservices.nextbus.com/service/publicJSONFeed?command=vehicleLocations&a=sf-muni&r=N&t=0')
         })
     })
     

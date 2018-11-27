@@ -49,7 +49,7 @@ export class MapComponent implements OnInit,OnChanges {
         var main = this;
         this.loadMapScript().then(function() {
             main.map = main.initMap(main.mapElement);
-        });
+        }).catch(() => {});
     }
 
     /*
@@ -92,8 +92,11 @@ export class MapComponent implements OnInit,OnChanges {
             let script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = GOOGLE_URL + GOOGLE_KEY;
-            script.onload = () =>{
+            script.onload = () => {
                 resolve();
+            };
+            script.onerror = () => {
+                reject();
             }
             document.getElementsByTagName('body')[0].appendChild(script);
         })

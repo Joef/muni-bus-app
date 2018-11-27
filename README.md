@@ -28,4 +28,4 @@ The app uses the [Google Maps API](https://developers.google.com/maps/documentat
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). 
 
-> The current project versions of Jasmine and Typescript are seemingly incompatible, so need to do some debugging there in order to get tests running again.  Currently one test created for the vehicle service, with the rest of the app being somewhat static.
+> Currently one test created for the vehicle service, with the rest of the app being somewhat static.
